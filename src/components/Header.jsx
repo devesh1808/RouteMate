@@ -9,15 +9,15 @@ export const Header = () => {
         <span>Routemate</span>
       </Link>
       <nav className="navigation">
-        <Link to="/" className="link">
+        <NavLink to="/" className="link" end>
           Home
-        </Link>
-        <Link to="/products" className="link">
+        </NavLink>
+        <NavLink to="/products" className="link">
           Products
-        </Link>
-        <Link to="/contact" className="link">
+        </NavLink>
+        <NavLink to="/contact" className="link">
           Contact
-        </Link>
+        </NavLink>
       </nav>
     </header>
   );
