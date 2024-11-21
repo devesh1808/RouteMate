@@ -1,3 +1,11 @@
+import { useSearchParams, useLocation } from "react-router-dom";
+
 export const ProductList = () => {
-  return <div className="component">ProductList</div>;
+  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  console.log(location);
+  
+  return (
+    <div className="component">ProductList</div>
+  );
 };
