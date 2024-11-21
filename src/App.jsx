@@ -25,7 +25,7 @@ export default function App() {
             path="admin"
             element={user ? <Admin /> : <Navigate to="/products" />}
           />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound title="404" />} />
         </Routes>
       </main>
       <Footer />
