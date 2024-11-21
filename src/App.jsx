@@ -6,6 +6,7 @@ import { ProductList } from "./components/ProductList.jsx";
 import { ProductDetail } from "./components/ProductDetail.jsx";
 import { Contact } from "./components/Contact.jsx";
 import { Admin } from "./components/Admin.jsx";
+import { PageNotFound } from "./components/PageNotFound.jsx";
 import "./App.css";
 
 export default function App() {
@@ -21,9 +22,10 @@ export default function App() {
           <Route path="products/:id" element={<ProductDetail />} />
           <Route path="contact" element={<Contact />} />
           <Route
-            path="/admin"
+            path="admin"
             element={user ? <Admin /> : <Navigate to="/products" />}
           />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
       <Footer />
